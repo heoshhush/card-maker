@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: wheat;
+  align-items: center;
+  height: 35em;
+  min-width: 35em;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.4);
+  background: rgb(251, 251, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(251, 251, 255, 1) 1%,
+    rgba(255, 238, 255, 1) 22%,
+    rgba(220, 237, 255, 1) 55%,
+    rgba(195, 236, 255, 1) 67%,
+    rgba(180, 236, 255, 1) 73%,
+    rgba(183, 236, 255, 1) 82%,
+    rgba(132, 234, 255, 1) 100%
+  );
+}
+button {
+  all: unset;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+button:hover {
+  transform: scale(1.05);
+}
+.logo {
+  flex-basis: 25%;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: purple;
+  margin-bottom: 0;
+}
+.logins {
+  flex-basis: 60%;
+  border-top: 2px solid gray;
+  padding-top: 2em;
+}
+.googleLoginBtn {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  width: 16em;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+  margin-bottom: 2em;
+}
+.githubLoginBtn {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  width: 16em;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+}
+.google {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  flex-basis: 20%;
+}
+.github {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  flex-basis: 20%;
+}
+.logout {
+  flex-basis: 20%;
+}
