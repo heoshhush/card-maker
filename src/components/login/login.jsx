@@ -26,7 +26,7 @@ const Login = (props) => {
 
     return(
         <div className={Styles.container}>
-          <h1 className={Styles.logo}>CARD MAKER</h1>
+          <h1 className={Styles.logo}>BUSINESS CARD MAKER</h1>
         <div className={Styles.logins}>
           <button
           className={Styles.googleLoginBtn} 

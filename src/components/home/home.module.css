@@ -1,0 +1,61 @@
+.container {
+}
+
+.logo {
+  background: rgb(251, 251, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(251, 251, 255, 1) 1%,
+    rgba(255, 238, 255, 1) 22%,
+    rgba(220, 237, 255, 1) 55%,
+    rgba(195, 236, 255, 1) 67%,
+    rgba(180, 236, 255, 1) 73%,
+    rgba(183, 236, 255, 1) 82%,
+    rgba(132, 234, 255, 1) 100%
+  );
+  margin-top: -5rem;
+  width: 80vw;
+  height: 3em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1em;
+  background-color: aliceblue;
+  width: 80vw;
+  margin-top: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 1em;
+}
+.logoutBtn {
+  font-size: 1.2em;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 0.1em 0.2em 0.1em 0.2em;
+  letter-spacing: 0.1em;
+}
+.contents {
+  background-color: white;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+}
+.input {
+  flex-basis: 50%;
+  background-color: whitesmoke;
+}
+.output {
+  flex-basis: 50%;
+  background-color: snow;
+}

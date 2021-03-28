@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  background-color: wheat;
   align-items: center;
   height: 35em;
   min-width: 35em;
