@@ -1,13 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Styles from './card.module.css'
+import firebase from "firebase/app";
+import "firebase/database";
 
 const Card = (props) => {
+
+        const nameRef = useRef();
+        const companyRef = useRef();
+        const positionRef = useRef();
+        const emailRef = useRef();
+        const introduceRef = useRef();
+
+
+    const onType = () => {
+        props.setCardInfo(
+            nameRef.current.value,
+            companyRef.current.value,
+            positionRef.current.value,
+            emailRef.current.value,
+            introduceRef.current.value
+            )
+    }
+
+
     return(
         <div className={Styles.cardContainer}>
 
             <div className={Styles.firstLine}>
-                <input className={Styles.input} type="text" placeholder="Name"/>
-                <input className={Styles.input} type="text" placeholder="Company"/>
+                <input ref={nameRef} className={Styles.input} type="text" placeholder="Name"/>
+                <input ref={companyRef} className={Styles.input} type="text" placeholder="Company"/>
                 <select className={Styles.input} name="color" id="">
                     <option>White</option>
                     <option>Black</option>
@@ -15,17 +36,17 @@ const Card = (props) => {
                 </select>
             </div>
             <div className={Styles.secondLine}>
-                <input type="text" className={Styles.input} placeholder="Position"/>
-                <input type="text" className={Styles.input} placeholder="Email"/>
+                <input ref={positionRef} type="text" className={Styles.input} placeholder="Position"/>
+                <input ref={emailRef} type="text" className={Styles.input} placeholder="Email"/>
             </div>
             <div className={Styles.thirdLine}>
-                <textarea className={Styles.input} placeholder="introduce yourself"  cols="30" rows="10">
+                <textarea ref={introduceRef} className={Styles.input} placeholder="introduce yourself"  cols="30" rows="10">
 
                 </textarea>
             </div>
             <div className={Styles.fourthLine}>
-                <button className={Styles.pictureBtn}>Picture</button>
-                <button className={Styles.addDeleteBtn}>Add</button>
+                <button className={Styles.pictureBtn} >Picture</button>
+                <button className={Styles.addDeleteBtn} onClick={onType}>Add</button>
             </div>
         </div>
     )

@@ -7,9 +7,9 @@ import "firebase/auth";
 import "firebase/firestore"
 import { auth } from '../..';
 import CardList from '../card-list/card-list';
+import MadeCardList from '../madeCard-list/madeCardList';
 
 const Home = (props) => {
-
     const history = useHistory();
 
     firebase.auth().onAuthStateChanged(function(user) {
@@ -31,10 +31,20 @@ const Home = (props) => {
                 </div>
                 <div className={Styles.contents}>
                     <div className={Styles.input}>
-                     <CardList/>
+                     <CardList
+                     userId = {props.userId}
+                     setCardInfo = {props.setCardInfo}
+                     cards = {props.cards}
+                     />
                     </div>
 
-                    <div className={Styles.output}></div>
+                    <div className={Styles.output}>
+                        <MadeCardList 
+                        userId = {props.userId}
+                        cards = {props.cards}
+                        />
+
+                    </div>
                 </div>
             </div>
         )

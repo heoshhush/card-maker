@@ -36,25 +36,16 @@ export const singInWithGithub = () => auth.signInWithPopup(githubProvider);
 export default firebase;
 // 혹시 전체 라이브러리가 필요할지도 모르기 때문에 firebase도 export 해준다.
 
-// -------------------- database 실험 ------- 
-// const userId = '누구삼'
-// const myData = firebase.database().ref('/사람'+ userId);
 
-// myData.push(
-//   {hey: 'why?'}
-// )
-// myData.on('value', snapshot => {
-//   console.log(snapshot.val())
-// })
-
-const user = firebase.auth().currentUser
 
 ReactDOM.render(
+    
     <App
-    user = {user} 
     signInWithGoogle={signInWithGoogle}
     singInWithGithub={singInWithGithub}
-    auth ={auth}/>
+    auth ={auth}
+    />
+    
     ,
   document.getElementById('root')
 );

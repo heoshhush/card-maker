@@ -20,9 +20,6 @@ const Login = (props) => {
     }
   })
 
-  // 로그인 완료시, 다른 페이지로 이동!!! 기능 삽입해야합니다.
-
-
 
     return(
         <div className={Styles.container}>
@@ -39,10 +36,6 @@ const Login = (props) => {
           <i className={`fab fa-github ${Styles.github}`  }></i> 
             Sign in with Github</button>
         </div>
-        {/* <div className={Styles.logout}>
-          <button onClick={() => {
-            auth.signOut()}}>logOut</button>
-          </div> */}
         </div>
       )
         };
